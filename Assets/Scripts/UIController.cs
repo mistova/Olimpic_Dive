@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,15 +36,24 @@ public class UIController : MonoBehaviour
         slider.gameObject.SetActive(false);
     }
 
-    public void ButtonClick(string buttonString)
+    public void ButtonClick(int i)
     {
-        player.GetComponent<CheckMove>().ChangePosition(buttonString);
+        AnimationController.Instance.PerformPose(i);
     }
 
     internal void AddScore(int score)
     {
         value += score;
+        startText.text = "" + score;
+        startText.gameObject.SetActive(true);
+        StartCoroutine(SetTextInActiveAsync());
         RefreshScore();
+    }
+
+    IEnumerator SetTextInActiveAsync()
+    {
+        yield return new WaitForSeconds(1f);
+        startText.gameObject.SetActive(false);
     }
 
     internal void StartMoving()

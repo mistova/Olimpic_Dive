@@ -13,6 +13,7 @@ public class RampTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            AnimationController.Instance.Dive();
             UIController.Instance.StopSliderMovement();
         }
     }

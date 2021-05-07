@@ -17,6 +17,7 @@ public class CharacterMove : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             canGo = true;
+            AnimationController.Instance.StartToRun();
             UIController.Instance.StartMoving();
         }
         if (canGo)

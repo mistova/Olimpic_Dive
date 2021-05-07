@@ -6,7 +6,7 @@ public class TransparentObject : MonoBehaviour
     Material mat;
 
     [SerializeField]
-    string stringOfColor;
+    int poseNumber;
 
     [SerializeField]
     MakeTransparent [] transparencies;
@@ -17,9 +17,9 @@ public class TransparentObject : MonoBehaviour
             transparencies[i].ChangeAlpha(mat.color);
     }
 
-    internal string GetStringOfColor()
+    internal int GetNumberOfPose()
     {
-        return stringOfColor;
+        return poseNumber;
     }
 
     private void OnTriggerEnter(Collider other)
