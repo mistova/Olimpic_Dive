@@ -9,6 +9,7 @@ public class CheckMove : MonoBehaviour
             UIController.Instance.AddScore(GameController.Instance.wrongActionScore);
         else
             UIController.Instance.AddScore(GameController.Instance.correctActionScore);
+        AnimationController.Instance.BackFromPose();
     }
 
     internal void SetOther(GameObject other)

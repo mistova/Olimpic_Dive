@@ -29,8 +29,15 @@ public class AnimationController : MonoBehaviour
     }
     internal void PerformPose(int i)
     {
-        anim.SetBool("isPose" + pose, false);
+        if(pose > 0)
+            anim.SetBool("isPose" + pose, false);
         anim.SetBool("isPose" + i, true);
         pose = i;
+    }
+
+    internal void BackFromPose()
+    {
+        anim.SetBool("isPose" + pose, false);
+        pose = 0;
     }
 }
