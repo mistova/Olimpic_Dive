@@ -47,10 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: a7e8b81f2695e364ca54ff6cade0cfeb, type: 2}
   poseNumber: 2
-  transparencies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  transparencies: []
   girlAnim: {fileID: 9094952633597259157}
 --- !u!65 &1575416865
 BoxCollider:
@@ -1238,31 +1235,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.011184216
+      value: 0.013413429
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09858608
+      value: 0.09530306
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03351688
+      value: 0.041289326
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99590623
+      value: 0.9973749
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.034345306
+      value: 0.00552173
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0060226396
+      value: -0.008964544
       objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0833968
+      value: 0.07164061
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_Controller
@@ -1520,6 +1517,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.10441876
       objectReference: {fileID: 0}
+    - target: {fileID: 8417361359673230750, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7adfdff70b3c3444eb25e35f73e55575, type: 2}
     - target: {fileID: 8447082967072642302, guid: e7e8c2b748c6b8d4892fce08d06b9799, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.12708701
