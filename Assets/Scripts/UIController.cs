@@ -15,6 +15,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     GameObject player;
 
+    [SerializeField]
+    GameObject buttonHolder;
+
     int value;
 
     void Awake()
@@ -59,6 +62,11 @@ public class UIController : MonoBehaviour
     internal void StartMoving()
     {
         startText.gameObject.SetActive(false);
+    }
+
+    internal void SetButtonActive(bool b)
+    {
+        buttonHolder.SetActive(b);
     }
 
     void RefreshScore()

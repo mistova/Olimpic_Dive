@@ -21,10 +21,13 @@ public class AnimationController : MonoBehaviour
     }
     internal void Dive()
     {
+        BackFromPose();
+        anim.ResetTrigger("Fall");
         anim.SetTrigger("Dive");
     }
     internal void Fall()
     {
+        anim.ResetTrigger("Dive");
         anim.SetTrigger("Fall");
     }
     internal void PerformPose(int i)
@@ -37,7 +40,8 @@ public class AnimationController : MonoBehaviour
 
     internal void BackFromPose()
     {
-        anim.SetBool("isPose" + pose, false);
+        if (pose > 0)
+            anim.SetBool("isPose" + pose, false);
         pose = 0;
     }
 }

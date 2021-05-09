@@ -9,10 +9,14 @@ public class TransparentObject : MonoBehaviour
     int poseNumber;
 
     [SerializeField]
-    MakeTransparent [] transparencies;
+    MakeTransparent[] transparencies;
+
+    [SerializeField]
+    Animator girlAnim;
 
     void Start()
     {
+        girlAnim.SetInteger("Pose", poseNumber);
         for (int i = 0; i < transparencies.Length; i++)
             transparencies[i].ChangeAlpha(mat.color);
     }
@@ -27,6 +31,8 @@ public class TransparentObject : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<CheckMove>().SetOther(gameObject);
+            AnimationController.Instance.Fall();
+            UIController.Instance.SetButtonActive(true);
         }
     }
 
