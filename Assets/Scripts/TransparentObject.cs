@@ -31,8 +31,6 @@ public class TransparentObject : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<CheckMove>().SetOther(gameObject);
-            AnimationController.Instance.Fall();
-            UIController.Instance.SetButtonActive(true);
         }
     }
 

@@ -10,7 +10,7 @@ public class UIController : MonoBehaviour
     Slider slider;
 
     [SerializeField]
-    Text text, startText;
+    TMPro.TextMeshProUGUI text, startText;
 
     [SerializeField]
     GameObject player;

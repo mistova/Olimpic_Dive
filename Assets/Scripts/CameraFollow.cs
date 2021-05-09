@@ -6,6 +6,9 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     Transform playerTransform;
 
+    [SerializeField]
+    float followLimitY;
+
     void Start()
     {
         position = playerTransform.position - transform.position;
@@ -13,6 +16,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = playerTransform.position - position;
+        if(transform.position.y > followLimitY)
+            transform.position = playerTransform.position - position;
     }
 }
