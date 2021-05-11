@@ -4,19 +4,19 @@ using UnityEngine.UI;
 public class SliderMove : MonoBehaviour
 {
     [SerializeField]
-    float speed = 10;
+    float speed = 2;
 
     float value;
 
     bool turn, canRun;
-    Slider slider;
+    Image slider;
 
     void Start()
     {
         turn = true;
         canRun = true;
         value = -0.1f;
-        slider = GetComponent<Slider>();
+        slider = GetComponent<Image>();
     }
 
     void Update()
@@ -32,13 +32,13 @@ public class SliderMove : MonoBehaviour
         if (value < 1 && turn)
         {
             value += speed * Time.deltaTime;
-            slider.value = value;
+            slider.fillAmount = value;
         }
         else if (value > 0)
         {
             turn = false;
             value -= speed * Time.deltaTime;
-            slider.value = value;
+            slider.fillAmount = value;
         }
         else
             turn = true;
@@ -47,6 +47,6 @@ public class SliderMove : MonoBehaviour
     internal float GetValue()
     {
         canRun = false;
-        return slider.value;
+        return slider.fillAmount;
     }
 }

@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
     public static UIController Instance;
 
     [SerializeField]
-    Slider slider;
+    GameObject slider;
 
     [SerializeField]
     TMPro.TextMeshProUGUI text, startText;
@@ -29,12 +29,12 @@ public class UIController : MonoBehaviour
 
     internal void StartSliderMovement()
     {
-        slider.gameObject.SetActive(true);
+        slider.SetActive(true);
     }
 
     internal void StopSliderMovement()
     {
-        value = (int)(GameController.Instance.sliderScoreMultiplier * slider.GetComponent<SliderMove>().GetValue());
+        value = (int)(GameController.Instance.sliderScoreMultiplier * slider.GetComponent<Image>().fillAmount);
         RefreshScore();
         slider.gameObject.SetActive(false);
     }
