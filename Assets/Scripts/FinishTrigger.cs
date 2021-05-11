@@ -24,7 +24,6 @@ public class FinishTrigger : MonoBehaviour
         }
         if (timer > afterSecond && childCount==0)
         {
-            Debug.Log("S");
             childCount=1;
             lerpSmooth = 0;
         }
