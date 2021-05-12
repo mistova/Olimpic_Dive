@@ -10,6 +10,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="1sNkHBLvlIDlX2ZC5Nb8QeyJBtb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -55,6 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1620720347940</updated>
       <workItem from="1620720356008" duration="94000" />
+      <workItem from="1620769707681" duration="689000" />
+      <workItem from="1620805940113" duration="838000" />
     </task>
     <servers />
   </component>

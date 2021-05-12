@@ -29,14 +29,14 @@ public class UIController : MonoBehaviour
 
     internal void StartSliderMovement()
     {
-        slider.SetActive(true);
+        slider.transform.parent.gameObject.SetActive(true);
     }
 
     internal void StopSliderMovement()
     {
         value = (int)(GameController.Instance.sliderScoreMultiplier * slider.GetComponent<Image>().fillAmount);
         RefreshScore();
-        slider.gameObject.SetActive(false);
+        slider.transform.parent.gameObject.SetActive(false);
     }
 
     public void ButtonClick(int i)
