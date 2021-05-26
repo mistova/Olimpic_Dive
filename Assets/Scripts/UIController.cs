@@ -20,11 +20,14 @@ public class UIController : MonoBehaviour
 
     int value;
 
+    private GameObject[] buttons;
     void Awake()
     {
         if (Instance == null)
             Instance = this;
         value = 0;
+
+        buttons = GameObject.FindGameObjectsWithTag("Button");
     }
 
     internal void StartSliderMovement()
@@ -39,9 +42,9 @@ public class UIController : MonoBehaviour
         slider.transform.parent.gameObject.SetActive(false);
     }
 
-    public void ButtonClick(int i)
+    public void ButtonClick(int a)
     {
-        AnimationController.Instance.PerformPose(i);
+        AnimationController.Instance.PerformPose(a);
     }
 
     internal void AddScore(int score)
