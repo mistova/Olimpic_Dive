@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TransparentObject : MonoBehaviour
 {
-    [SerializeField] private RandomImageScript randomImageScript;
+    [SerializeField] private Randomizer randomizer;
     [SerializeField]
     Material mat;
 
@@ -42,9 +42,9 @@ public class TransparentObject : MonoBehaviour
         {
             other.gameObject.GetComponent<CheckMove>().CalculatePoint();
             other.gameObject.GetComponent<CheckMove>().SetOther(null);
-            if(randomImageScript.generation != 3)
+            if(randomizer.level != 3)
             {
-                randomImageScript.GenerateImage();
+                randomizer.CreateRandom();
             }            
         }
     }
