@@ -9,7 +9,7 @@ public class FinishTrigger : MonoBehaviour
     [SerializeField] private float slowness = 0.5f;
     [SerializeField] private float afterSecond = 7;
     [SerializeField] private bool gameHasFinished;
-
+    public Animator[] Juries;
     private float timer;
     private int childCount = 0;
     private void LateUpdate()
@@ -21,6 +21,10 @@ public class FinishTrigger : MonoBehaviour
             Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, cameraPos.transform.GetChild(childCount).rotation, lerpSmooth);
             lerpSmooth += Time.deltaTime * slowness;
             timer += Time.deltaTime;
+            for (int i = 0; i < Juries.Length; i++)
+            {
+                Juries[i].SetTrigger("Jury");
+            }
         }
         if (timer > afterSecond && childCount==0)
         {

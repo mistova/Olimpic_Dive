@@ -13,6 +13,7 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FinishTrigger.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sNkHBLvlIDlX2ZC5Nb8QeyJBtb" />
@@ -62,6 +63,8 @@
       <workItem from="1620720356008" duration="94000" />
       <workItem from="1620769707681" duration="689000" />
       <workItem from="1620805940113" duration="838000" />
+      <workItem from="1622528103378" duration="1511000" />
+      <workItem from="1622530691690" duration="318000" />
     </task>
     <servers />
   </component>
