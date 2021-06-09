@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Button
   - TransparentPose
+  - Image
   layers:
   - Default
   - TransparentFX
