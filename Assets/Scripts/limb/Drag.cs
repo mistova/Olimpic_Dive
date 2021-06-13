@@ -17,11 +17,17 @@ public class Drag : MonoBehaviour
 
     private Vector2 pointA, pointB, checkMousePosition;
 
+
+    public int armDirection;
+    public bool isArm;
+
+    [SerializeField] private GameObject image;
     private void Start()
     {
         StartPos = transform.position;
         r2FirstPos = r2.position;
         r = Vector3.Distance(r2.position, r1.position);
+
     }
     private void OnMouseDown()
     {
@@ -45,20 +51,8 @@ public class Drag : MonoBehaviour
     private void OnMouseDrag()
     {
         //Debug.Log("distance = " + Vector3.Distance(r2.position, r1.position) + "  r = " + r);
-        pointB = Input.mousePosition;
-        if(pointB != checkMousePosition)
-        {
-            if (pointB.x - pointA.x > 5 && Elbow.transform.localEulerAngles.z < 90)
-            {
-                Elbow.transform.localEulerAngles += Vector3.forward * 3;
-                checkMousePosition = Input.mousePosition;
-            }
-            else if (pointB.x - pointA.x > -5 && Elbow.transform.localEulerAngles.z > 0)
-            {
-                Elbow.transform.localEulerAngles += Vector3.forward * -3;
-                checkMousePosition = Input.mousePosition;
-            }
-        }
+        
+        RotateZ();
         
         if (Vector3.Distance(r2.position, r1.position) > r + 0.2f)
         {
@@ -90,6 +84,7 @@ public class Drag : MonoBehaviour
         {
             BackToLastPos();
         }
+        image.transform.LookAt(Camera.main.transform);
     }
     private void BackToLastPos()
     {
@@ -98,6 +93,23 @@ public class Drag : MonoBehaviour
         {
             transform.position = lastPos;
             isExceed = false;
+        }
+    }
+    private void RotateZ()
+    {
+        pointB = Input.mousePosition;
+        if (pointB != checkMousePosition && isArm)
+        {
+            if (pointB.x - pointA.x > 5 && Elbow.transform.localEulerAngles.z < 90)
+            {
+                Elbow.transform.localEulerAngles += Vector3.forward * 3 * armDirection;
+                checkMousePosition = Input.mousePosition;
+            }
+            else if (pointB.x - pointA.x > -5 && Elbow.transform.localEulerAngles.z > 0)
+            {
+                Elbow.transform.localEulerAngles += Vector3.forward * -3 * armDirection;
+                checkMousePosition = Input.mousePosition;
+            }
         }
     }
 }
